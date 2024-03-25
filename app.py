@@ -1,6 +1,8 @@
 import os
 
-lista_de_restalrante = ['Bom prato', 'Belo prato']
+lista_de_restalrante = [{'Nome': 'Bom prato', 'Categoria':'Comida Brasileira', 'Status':'Ativo'},
+                        {'Nome': 'Bar dos irmãos', 'Categoria':'Bar', 'Status':'Inativo'},
+                        {'Nome': 'Bela Pizza', 'Categoria':'Comida Italiana', 'Status':'Ativo'}]
 
 def exibir_nome_do_programa():
     print("""
@@ -47,7 +49,8 @@ def cadastrar_novo_restalrante():
 def lista_restaurante():
     exibir_subtitulo('Listando os restalrantes')
     for restaurante in lista_de_restalrante:
-        print(f'.{restaurante}')
+        #nome_restaurante = 
+        print(f'- {restaurante['Nome']} | {restaurante['Categoria']} | {restaurante['Status']}')
     
     voltar_ao_menu_principal()
 
